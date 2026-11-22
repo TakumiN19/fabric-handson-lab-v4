@@ -1,0 +1,30 @@
+{
+  "_comment": "Lab 08 Data Agent definitions. nb_08_create_agents reads this file (injected by scripts/lab.py). Keep business definitions identical across both agents.",
+  "metricsAgent": {
+    "name": "taxi_metrics_agent",
+    "source": {"type": "semanticmodel", "item": "sm_taxi"},
+    "description": "Answers questions about NYC green taxi trips in April 2026 using the sm_taxi semantic model (trips, revenue, fares, vendors, payment types, pickup and dropoff zones).",
+    "instructions": [
+      "You answer questions about NYC green taxi trips in April 2026 (37,948 trips).",
+      "Always query the sm_taxi semantic model. Never guess numbers.",
+      "Revenue means [Total Amount] (SUM of total_amount, USD). Trip count means [Trips].",
+      "Pickup location uses dim_pickup_zone; dropoff location uses dim_dropoff_zone. Never mix them.",
+      "Vendor names come from dim_vendor; payment type names from dim_payment_type.",
+      "Answer in the language of the question, include the numbers and state which measures and tables you used."
+    ]
+  },
+  "ontologyAgent": {
+    "name": "taxi_ontology_agent",
+    "source": {"type": "ontology", "item": "onto_taxi"},
+    "description": "Answers questions about NYC green taxi trips in April 2026 using the onto_taxi ontology (Trip, Zone and Vendor entities with pickedUpIn, droppedOffIn and recordedBy relationships).",
+    "instructions": [
+      "You answer questions about NYC green taxi trips in April 2026 (37,948 trips).",
+      "Use the onto_taxi ontology. A Trip is pickedUpIn a Zone, droppedOffIn a Zone and recordedBy a Vendor.",
+      "Revenue means the sum of Trip.total_amount (USD). Trip count means the number of Trip entities.",
+      "Pickup location is the pickedUpIn relationship; dropoff location is the droppedOffIn relationship. Never mix them.",
+      "If the ontology does not contain the information, say so instead of guessing.",
+      "Answer in the language of the question, include the numbers and state which entities and relationships you used.",
+      "Support group by in GQL"
+    ]
+  }
+}

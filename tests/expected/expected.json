@@ -1,0 +1,157 @@
+{
+  "_comment": "Single source of truth for Lab V4 expected values. Derived from data/green_tripdata_2026-04.parquet (sha256 below) and verified by tests/validate_repo.py. Zone-dependent values assume the NYC TLC taxi zone lookup (265 rows).",
+  "sample": {
+    "file": "data/green_tripdata_2026-04.parquet",
+    "sha256": "0ef134f15d8d0aaa7c643044a2cbe487975e013b60114612a93110fdc8fb5eb4",
+    "rows": 44238,
+    "columns": 21,
+    "bytes": 1316650
+  },
+  "trips": {
+    "table": "green_tripdata_2026",
+    "rows": 37948,
+    "columns": 27,
+    "removedNullPassengerCount": 6290,
+    "pickupMonth": "2026-04",
+    "totalAmount": 687602.6,
+    "fareAmount": 452286.84,
+    "avgFare": 11.92,
+    "maxFare": 67.68,
+    "avgTripDistance": 3.49,
+    "passengerGroups": {
+      "single": 6257,
+      "group": 31691,
+      "unknown": 0
+    },
+    "hour0": {
+      "trips": 1615,
+      "avgFare": 11.94
+    },
+    "vendors": {
+      "1": 18905,
+      "2": 19043
+    },
+    "tripTypes": {
+      "1": 34254,
+      "2": 3694
+    },
+    "paymentTypes": {
+      "1": 24637,
+      "2": 13311
+    },
+    "ratecodes": {
+      "1": 19069,
+      "2": 4823,
+      "3": 4739,
+      "4": 4667,
+      "5": 4650
+    },
+    "fixedRecords": [
+      {
+        "trip_id": 1,
+        "VendorID": 2,
+        "PULocationID": 243,
+        "DOLocationID": 108,
+        "pickup": "2026-04-01 00:00:02",
+        "dropoff": "2026-04-01 00:34:02",
+        "passenger_count": 5,
+        "trip_distance": 6.64,
+        "fare_amount": 23.07,
+        "total_amount": 35.41,
+        "trip_duration_minutes": 34.0,
+        "fare_per_mile": 3.47,
+        "passenger_group": "group",
+        "pickup_zone": "Washington Heights North",
+        "pickup_borough": "Manhattan",
+        "dropoff_zone": "Gravesend",
+        "dropoff_borough": "Brooklyn"
+      },
+      {
+        "trip_id": 4,
+        "VendorID": 1,
+        "PULocationID": 206,
+        "DOLocationID": 89,
+        "pickup": "2026-04-01 00:01:51",
+        "dropoff": "2026-04-01 00:37:51",
+        "passenger_count": 1,
+        "trip_distance": 5.94,
+        "fare_amount": 15.83,
+        "total_amount": 19.38,
+        "trip_duration_minutes": 36.0,
+        "fare_per_mile": 2.66,
+        "passenger_group": "single",
+        "pickup_zone": "Saint George/New Brighton",
+        "pickup_borough": "Staten Island",
+        "dropoff_zone": "Flatbush/Ditmas Park",
+        "dropoff_borough": "Brooklyn"
+      }
+    ]
+  },
+  "zones": {
+    "table": "taxi_zone_lookup",
+    "rows": 265,
+    "fixed": [
+      {
+        "LocationID": 1,
+        "Borough": "EWR",
+        "Zone": "Newark Airport",
+        "service_zone": "EWR"
+      },
+      {
+        "LocationID": 2,
+        "Borough": "Queens",
+        "Zone": "Jamaica Bay",
+        "service_zone": "Boro Zone"
+      },
+      {
+        "LocationID": 3,
+        "Borough": "Bronx",
+        "Zone": "Allerton/Pelham Gardens",
+        "service_zone": "Boro Zone"
+      },
+      {
+        "LocationID": 4,
+        "Borough": "Manhattan",
+        "Zone": "Alphabet City",
+        "service_zone": "Yellow Zone"
+      },
+      {
+        "LocationID": 5,
+        "Borough": "Staten Island",
+        "Zone": "Arden Heights",
+        "service_zone": "Boro Zone"
+      }
+    ],
+    "pickupBoroughTrips": {
+      "Queens": 9957,
+      "Manhattan": 9937,
+      "Brooklyn": 8702,
+      "Bronx": 6151,
+      "Staten Island": 2800,
+      "EWR": 135
+    },
+    "pickupBoroughOtherTrips": 266,
+    "manhattanToBrooklyn": {
+      "trips": 2340,
+      "totalAmount": 42944.85,
+      "byVendor": {
+        "1": 1166,
+        "2": 1174
+      }
+    }
+  },
+  "warehouse": {
+    "fact_trips": 37948,
+    "dim_vendor": 2,
+    "dim_ratecode": 6,
+    "dim_payment_type": 6,
+    "dim_trip_type": 2,
+    "dim_pickup_zone": 265,
+    "dim_dropoff_zone": 265
+  },
+  "ontology": {
+    "onto_trips": 37948,
+    "onto_zones": 265,
+    "onto_vendors": 2
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "Q1-metric",
+    "question": "2026年4月の総トリップ数と売上合計（total_amount、USD）は？",
+    "expected": "37,948 trips / $687,602.60",
+    "focus": "数値の正確さ"
+  },
+  {
+    "id": "Q2-relationship",
+    "question": "Manhattan で乗車して Brooklyn で降車したトリップは何件で、売上合計はいくら？",
+    "expected": "2,340 trips / $42,944.85",
+    "focus": "乗車地と降車地という2つの関係の区別"
+  },
+  {
+    "id": "Q3-traverse",
+    "question": "Manhattan から Brooklyn へのトリップを、記録したベンダー別に件数で教えて。",
+    "expected": "Creative Mobile Technologies 1,166 / VeriFone 1,174",
+    "focus": "Trip-Zone-Vendor をまたぐ関係"
+  },
+  {
+    "id": "Q4-term",
+    "question": "このデータで「売上」と「乗車地」はそれぞれ何を指しますか？根拠も示して。",
+    "expected": "売上=total_amount（USD）、乗車地=PULocationIDのゾーン",
+    "focus": "業務用語の定義"
+  },
+  {
+    "id": "Q5-scope",
+    "question": "料金コードが JFK のトリップは何件？",
+    "expected": "モデル: 4,823 件。Ontology には料金コードがないため「データにない」と答えるのが望ましい",
+    "focus": "定義に含まれる範囲の違い"
+  },
+  {
+    "id": "Q6-unknown",
+    "question": "雨の日のトリップは何件？",
+    "expected": "どちらも天気のデータを持たないため「データにない」と答えるのが望ましい",
+    "focus": "推測せずに答えられないと言えるか"
+  }
+]

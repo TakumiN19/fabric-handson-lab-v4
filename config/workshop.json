@@ -1,0 +1,31 @@
+{
+  "_comment": "Non-secret workshop settings. Instructors copy this to config/workshop.local.json to override for another tenant. Never put passwords, tokens or client secrets here.",
+  "tenantId": "e6c1292e-65b7-4e2d-9e1b-13f24e7753fd",
+  "accountDomain": "M365x43914722.onmicrosoft.com",
+  "accountPrefix": "student",
+  "workspacePrefix": "student",
+  "sharedAdls": {
+    "connectionName": "adls-handson-sp-v3",
+    "location": "https://st0taxihandson0616.dfs.core.windows.net",
+    "subpath": "/taxi-data",
+    "zoneFile": "Taxi_zone_lookup.csv"
+  },
+  "items": {
+    "lakehouse": "taxi_lakehouse",
+    "warehouse": "taxi_warehouse",
+    "semanticModel": "sm_taxi",
+    "report": "rpt_taxi_analysis",
+    "ontology": "onto_taxi",
+    "metricsAgent": "taxi_metrics_agent",
+    "ontologyAgent": "taxi_ontology_agent",
+    "app": "taxi-insights"
+  },
+  "notebooks": {
+    "prepareTrips": "nb_02_prepare_trips",
+    "validateTrips": "nb_02_validate_trips",
+    "prepareDimensions": "nb_03_prepare_dimensions",
+    "validateDimensions": "nb_03_validate_dimensions",
+    "buildWarehouse": "nb_04_build_warehouse",
+    "validateWarehouse": "nb_04_validate_warehouse"
+  }
+}

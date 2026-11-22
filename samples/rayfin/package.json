@@ -1,0 +1,11 @@
+{
+  "name": "lab-v4-rayfin-samples",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"test/*.test.mts\""
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}
