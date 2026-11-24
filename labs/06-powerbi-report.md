@@ -55,7 +55,8 @@ rpt_taxi_analysis: validate succeeded (errors: 0) / published
 3. マトリックスで **Manhattan → Brooklyn が 2,340 件** であることを確認します。
 4. スライサーでベンダーを切り替え、各ビジュアルが連動することを確認します。
 
-![完成イメージ（V3 のレポート例）](https://github.com/user-attachments/assets/b4c7448c-1e23-4fdd-b9fe-3c65c988b777)
+![完成イメージ（V3 のレポート例）]<img width="1163" height="650" alt="image" src="https://github.com/user-attachments/assets/636db996-2f0a-4e7b-9155-dc1bd23e2e4a" />
+
 
 ---
 
